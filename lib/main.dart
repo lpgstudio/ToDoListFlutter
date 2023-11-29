@@ -8,6 +8,14 @@ void main() async {
 
   // Open a box
 
+  // try {
+  //   if (!Hive.isBoxOpen('myBox')) var box = await Hive.openBox<Type>('myBox');
+  // } catch (error) {
+  //   await Hive.deleteBoxFromDisk('myBox');
+  //   var box = await Hive.openBox('myBox');
+  // }
+
+  // ignore: unused_local_variable
   var box = await Hive.openBox('myBox');
 
   runApp(const MyApp());
@@ -20,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
       theme: ThemeData(primarySwatch: Colors.blue),
     );
   }

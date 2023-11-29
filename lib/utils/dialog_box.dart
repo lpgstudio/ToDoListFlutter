@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_list/utils/my_button.dart';
 
+// ignore: must_be_immutable
 class DialogBox extends StatelessWidget {
   DialogBox(
       {super.key,
@@ -16,7 +17,7 @@ class DialogBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: const Color.fromARGB(255, 235, 235, 235),
-      content: Container(
+      content: SizedBox(
         height: 120,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

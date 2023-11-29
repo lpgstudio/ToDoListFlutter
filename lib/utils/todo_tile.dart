@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
+// ignore: must_be_immutable
 class ToDoTile extends StatelessWidget {
   ToDoTile({
     super.key,
@@ -21,7 +22,7 @@ class ToDoTile extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
       child: Slidable(
         endActionPane: ActionPane(
-          motion: StretchMotion(),
+          motion: const StretchMotion(),
           children: [
             SlidableAction(
               onPressed: deleteFunction,
