@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todo_list/pages/home_page.dart';
 
-void main() async {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   // init the hive
   await Hive.initFlutter();
 
+  // await _openHiveBox();
   // Open a box
 
   // try {
